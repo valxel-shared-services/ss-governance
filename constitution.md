@@ -4,7 +4,7 @@ version: 1.0.0
 ---
 # Shared services constitution
 
-Applies to every change in a vrixel-shared-services repo, whichever product's feature makes it.
+Applies to every change in a valxel-shared-services repo, whichever product's feature makes it.
 
 - **SS-1** Shared services ship as versioned libraries, SDKs or deployable charts; each consuming product runs them in its own runtime. (Policy)
 - **SS-2** Semantic versioning: a breaking change needs a new major version and a deprecation window; consumers adopt new versions through their own change sets. (Test)
