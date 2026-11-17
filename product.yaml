@@ -1,4 +1,4 @@
-# Shared services governance manifest, read by the Vrixel agentic SDLC tool.
+# Shared services governance manifest, read by the Valxel agentic SDLC tool.
 # Shared services ship as versioned packages: libraries, and container images of services such as
 # the LLM gateway and the audit sink. They own no runtime: every consuming product runs them in its
 # own infrastructure, so this manifest declares no runtime.
@@ -12,11 +12,11 @@ max_loops: 3
 repos:
 # Anthropic Messages API in front of the providers each product's data class allows, with
 # redaction, per-agent budgets and a usage ledger (VX-7, VX-12). Ships a container image.
-- name: vrixel-shared-services/ss-llm-gateway
+- name: valxel-shared-services/ss-llm-gateway
   role: library
 # Ships a container image each product runs in its own runtime (shared lanes own no runtime).
 # Copies the product's Kafka audit topic into a hash-chained Postgres table and an Object Lock archive (VX-15).
-- name: vrixel-shared-services/ss-audit-sink
+- name: valxel-shared-services/ss-audit-sink
   role: library
 approvers:
   g1: [ss-platform-owner]
